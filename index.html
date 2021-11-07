@@ -9,8 +9,28 @@
 </head>
 <body>
   <div class="container">
-    <h1>Deck Builder</h1>
-    <button type=button class="btn btn-primary" id="generateButton">Generate</button>
+    <div class="jumbotron">
+      <h1>Magic the Gathering deck builder</h1>
+    </div>
+    <div class="instructions">
+      <h3>Enter your card in the format of number card name i.e. "4 birds of paradise" (do not include quotes)</h3>
+    </div>
+    <div class="inputSide col-md-8">
+      <form class="form-group">
+        <div class="form-check-inline">
+          <input type="checkbox" class="form-check-input" id="mainDeck">
+          <label class="form-check-label" for="mainDeck">Main deck</label>
+        </div>
+        <div class="form-check-inline">  
+          <input type="checkbox" class="form-check-input" id="sideboard">
+          <label class="form-check-label" for="sideboard">Sideboard</label>
+        </div>
+        <br>
+        <label for="cardName">Enter card name: </label>
+        <input type="text" class="form-control" id="cardName">
+      </form>
+
+    </div>
     <ul id="deck">Your deck:
 
     </ul>

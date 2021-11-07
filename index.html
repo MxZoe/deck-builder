@@ -13,8 +13,9 @@
       <h1>Magic the Gathering deck builder</h1>
     </div>
     <div class="instructions">
-      <h3>Enter your card in the format of number card name i.e. "4 birds of paradise" (do not include quotes)</h3>
+      <h5>Enter your card in the format of [number] [card name] i.e. "4 birds of paradise" (do not include quotes)</h5>
     </div>
+    <div class="row">
     <div class="inputSide col-md-8">
       <form class="form-group">
         <div class="form-check-inline">
@@ -26,15 +27,20 @@
           <label class="form-check-label" for="sideboard">Sideboard</label>
         </div>
         <br>
-        <label for="cardName">Enter card name: </label>
-        <input type="text" class="form-control" id="cardName">
-      </form>
+        <div class="form-group">
+          <label for="cardName">Enter card name: </label>
+          <input type="text" class="form-control" id="cardName">
+        </div>
+        <button type="submit" id="addButton">Add card</button>
+        <button type="button" id="copyButton">Copy list</button>
+        </form>
+      </div>
+      <div class="deckDisplay col-md-4">    
+        <ul id="deck">Your deck:
 
+        </ul>
+      </div>
     </div>
-    <ul id="deck">Your deck:
-
-    </ul>
-    </form>
-  </div>
+  </div><!--end container div-->
 </body>
 </html>

@@ -1,14 +1,23 @@
 $(document).ready(function(){
-const cardNumbers = ["ace", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "queen", "kings"];
-const cardSuits = ["clubs", "diamonds", "hearts", "spades"];
+const cards = [];
+const sideCards = ["SIDEBOARD"];
 
-  $("#generateButton").click(function(event){
-    cardSuits.forEach(function(element){
-      cardNumbers.forEach(function(element2){
-        let cardNames = element2.toString().concat(" of " + element);
-        $("#deck").append("<li>" + cardNames + "</li>");
-      })
-    })  
+  $("#formOne").submit(function(event){
+    currentCard = $("#cardName").val();
+    radioButtonValue = $("input[name='deckCheck']:checked").val();
+    if(radioButtonValue == "main"){
+      cards.push(currentCard);
+      $("#mainDisplay").append("<li>" + currentCard + "</li>");
+    }
+    else if(radioButtonValue == "side"){
+      sideCards.push(currentCard);
+      $("#sideDisplay").append("<li>" + currentCard + "</li>");
+    }
+    else{
+      alert("Please check either maindeck or sideboard.");
+    };
+    $("#cardName").val("");
+    event.preventDefault();
   });
 
 });
